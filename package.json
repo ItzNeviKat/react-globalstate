@@ -1,0 +1,24 @@
+{
+  "name": "react-globalstate",
+  "version": "1.0.0",
+  "description": "This module allows you to use one state for all components of app in React",
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItzNeviKat/react-globalstate.git"
+  },
+  "homepage": "https://github.com/ItzNeviKat/react-globalstate#readme",
+  "author": "ItzNeviKat_",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7",
+    "@types/react": "^16.9.49"
+  },
+  "peerDependencies": {
+    "react": ">16.8"
+  }
+}
