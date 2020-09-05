@@ -90,32 +90,32 @@ export default withGlobalState(App);
 ### Методы
 Получение текущего состояния
 ```javascript
-globalState.state    // => { foo: "bar" }
+globalState    // => { foo: "bar" }
 ```
 
 Установка нового состояния
 ```javascript
-globalState.setState({
+setGlobalState({
   ...новое состояние
 });
 ```
 При этом обновляются или добавляется только те поля, которые вы укажете в новом состоянии, т. е. старые поля и значения не удаляются. Например:<br/>
 *NOTE: Только без использования customSetState*
 ```javascript
-window.globalState.setState({
+setGlobalState({
   foo: "bar"
 });
-console.log(window.globalState.state);    // => { foo: "bar" }
+console.log(globalState);    // => { foo: "bar" }
 
-window.globalState.setState({
+setGlobalState({
   hello: "world"
 });
-console.log(window.globalState.state);    // => { foo: "bar", hello: "world }
+console.log(globalState);    // => { foo: "bar", hello: "world }
 
-window.globalState.setState({
+setGlobalState({
   foo: "notbar"
 });
-console.log(window.globalState.state);    // => { foo: "notbar", hello: "world }
+console.log(globalState);    // => { foo: "notbar", hello: "world }
 ```
 
 Использование функции пользовательского обновления состояния (customSetState):
