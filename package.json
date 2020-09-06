@@ -1,6 +1,6 @@
 {
   "name": "@itznevikat/react-globalstate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This module allows you to use one state for all components of app in React",
   "main": "dist/index.js",
   "types": "dist/types.d.ts",

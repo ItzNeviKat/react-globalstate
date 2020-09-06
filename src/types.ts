@@ -12,3 +12,5 @@ export interface IOptions<T> {
   customSetState?: TCustomSetState<T>;
   callbacks?: TCallback[];
 }
+
+export { GlobalState } from './GlobalState';
