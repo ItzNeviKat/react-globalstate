@@ -6,11 +6,11 @@
 ## Установка
 Вы можете установить модуль с помощью `npm`:
 ```shell script
-npm install react-globalstate
+npm install @itznevikat/react-globalstate
 ```
 или с помощью `yarn`:
 ```shell script
-yarn add react-globalstate
+yarn add @itznevikat/react-globalstate
 ```
 
 ## Использование
