@@ -16,7 +16,7 @@ yarn add @itznevikat/react-globalstate
 ## Использование
 В файле store импортируем класс GlobalState из модуля:
 ```javascript
-import { GlobalState } from 'react-globalstate';
+import { GlobalState } from '@itznevikat/react-globalstate';
 ```
 Затем создаём новый объект класса GlobalState, который записываем в константу globalStateObject и экспортируем:
 ```javascript
