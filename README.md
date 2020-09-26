@@ -71,16 +71,19 @@ import { withGlobalState } from './store';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    
+    this.globalState = this.props.globalState;
+    this.setGlobalState = this.props.setGlobalState;
   }
 
   changeState() {
-    this.props.setGlobalState({ foo: "bar" });
+    this.setGlobalState({ foo: "bar" });
   }
 
   render() {
     return (
       <div>
-        <h1>Foo is now: {this.props.globalState.foo}</h1>
+        <h1>Foo is now: {this.globalState.foo}</h1>
         <button onClick={this.changeState}>Click here to change 'foo' state</button>
       </div>
     );
