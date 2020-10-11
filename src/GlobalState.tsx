@@ -4,8 +4,8 @@ import { IOptions, TCallback, TSetState, TUseGlobalState, TWithGlobalState } fro
 export class GlobalState<T> {
   private options: IOptions<T> = {};
 
-  constructor(initialState?: T, customSetState?: TSetState<T>) {
-    this.options.state = initialState;
+  constructor(initialState?: Partial<T>, customSetState?: TSetState<T>) {
+    this.options.state = initialState as T;
     this.options.customSetState = customSetState;
     this.options.callbacks = [];
 
@@ -20,7 +20,7 @@ export class GlobalState<T> {
     return () => (this.options.callbacks = this.options.callbacks.filter(cb => cb !== callback));
   }
 
-  public setState(newState: T): T {
+  public setState(newState: Partial<T>): T {
     if (this.options.customSetState) this.options.state = this.options.customSetState(this.options.state, newState);
     else this.options.state = { ...this.state, ...newState };
 

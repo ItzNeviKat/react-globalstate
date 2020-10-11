@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 export type TCallback = () => void;
-export type TSetState<T> = (newState: T) => T;
-export type TCustomSetState<T> = (state: T, newState: T) => T;
+export type TSetState<T> = (newState: Partial<T>) => T;
+export type TCustomSetState<T> = (state: T, newState: Partial<T>) => T;
 
 export type TUseGlobalState<T> = [T, TSetState<T>];
 export type TWithGlobalState = ReactNode;
