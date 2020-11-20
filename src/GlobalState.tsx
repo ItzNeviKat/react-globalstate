@@ -31,16 +31,18 @@ export class GlobalState<T> {
   public useGlobalState(): TUseGlobalState<T> {
     const [, forceUpdate] = React.useReducer(x => x + 1, 0);
 
-    React.useEffect(() => this.subscribe(() => forceUpdate()), []);
+    const unSubscribe = this.subscribe(() => forceUpdate());
 
-    return [this.state, this.setState];
+    React.useEffect(() => unSubscribe, []);
+
+    return [this.state, this.setState, unSubscribe];
   }
 
   public withGlobalState(Component: React.ElementType): TWithGlobalState {
     return (props: any) => {
-      const [globalState, setGlobalState] = this.useGlobalState();
+      const [globalState, setGlobalState, unSubscribe] = this.useGlobalState();
 
-      return (<Component globalState={globalState} setGlobalState={setGlobalState} {...props} />);
+      return (<Component globalState={globalState} setGlobalState={setGlobalState} unSubscribe={unSubscribe} {...props} />);
     }
   }
 
