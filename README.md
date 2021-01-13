@@ -1,7 +1,10 @@
 # react-globalstate
  This module allows you to use one state for all components of app in React
+ Please use Redux or MobX for medium and large projects. This module is NOT replacement for it
 
  Этот модуль позволяет вам использовать одно состояние для всех компонентов приложения в React
+ Пожалуйста, используйте Redux или MobX для средних и больших проектов. Этот модуль НЕ замена для них
+ 
  
 ## Обновление
 Если вы нашли баг в модуле или хотите, чтобы я добавил новую фичу - смело оставляйте `issue`.
